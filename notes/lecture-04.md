@@ -71,16 +71,16 @@ int main(int argc, char *argv[]) {
 
 ## Event Types
 
-![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/images001.png)
+![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image001.png)
 
 ## Event Masking
 
-![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/images002.png)
+![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image002.png)
 
 ## _XEvent union
 - 모든 이벤트의 정보는 이 자료 구조를 통해 전달이 된다.
 
-![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/images003.png)
+![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image003.png)
 
 ## Window Event
 
