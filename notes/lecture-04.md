@@ -1,7 +1,7 @@
 
 # lecture 04
 
-# Drawing Primitives
+# I. Drawing Primitives
 
 ```C++
 glBegin(GL_TRIANGLES);
@@ -25,7 +25,8 @@ Point size
 
 Line width
 
-# Callback Functions
+# II. Callback Functions
+
 ### void glutReshapeFunc(void(*func)(int width, int height))
 - Called when the window size or shape is changed
 
@@ -50,7 +51,7 @@ Line width
 ### void glutPassiveMotionFunc(void(*func)(int x, int y))
 - Called when a mouse is moving without being pressed
 
-# X Window Event handler
+# III. X Window Event handler
 
 ```C++
 XSetWindowAttributes swa;
@@ -69,22 +70,22 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-## Event Types
+## 1. Event Types
 
 ![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image001.png)
 
-## Event Masking
+## 2. Event Masking
 
 ![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image002.png)
 
-## _XEvent union
+## 3. _XEvent union
 - 모든 이벤트의 정보는 이 자료 구조를 통해 전달이 된다.
 
 ![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image003.png)
 
-## Window Event
+## 4. Window Event
 
-### 1. XConfigureEvent
+### (1) XConfigureEvent
 - Reported when window is moveed  or resized
 - Contains [int x, y, width, height]
 - Mask : StructureNotifyMask
@@ -102,7 +103,7 @@ if(xev.type == ConfigureNotify) {
 }
 ```
 
-### 2. XKeyEvent
+### (2) XKeyEvent
 - Reported when keyboard is pressed or released
 - Contains [unsigned int keycode]
 - Mask : KeyPressMask, KeyReleaseMask
@@ -121,7 +122,7 @@ if(xev.type == KeyPress) {
 
 - XkbKeycodeToKeysym의 첫번째 0 : Key Group, 두번째 0 : Shift Level(Pressed or not)
 
-### 3. XButtonEvent
+### (3) XButtonEvent
 - Reported when mouse btn is pressed or released
 - Contains [int x, y; unsigned int button]
 - Mask : ButtonPressMask, ButtonReleaseMask
@@ -140,7 +141,7 @@ if(xev.type == ButtonPress) {
 }
 ```
 
-### 4. XMotionEvent
+### (4) XMotionEvent
 - Reported when mouse pointer is moved
 - Contains [int x, y]
 - Mask : PointerMotionMask
