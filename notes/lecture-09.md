@@ -5,7 +5,7 @@
 - Texture Mapping : 그 물체가 가지고 있는 텍스쳐 바탕으로 각 픽셀의 색상을 결정하는 과정
 ## 1. Wrapping Mode
 ### Clamping
-- if (s,t > 1) 1 else 0
+- if (s,t > 1) 1, if (s,t < 0) 0
 - `glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);`
 ### Repeating
 - Use s,t modulo 1

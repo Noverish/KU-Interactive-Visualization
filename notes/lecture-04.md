@@ -21,9 +21,9 @@ glEnd();
 
 `glColor3f(R, G, B);`
 
-Point size
+`glPointSize(5.0);`
 
-Line width
+`glLineWidth(5.0);`
 
 # II. Callback Functions
 
@@ -33,7 +33,7 @@ Line width
 ### void glutIdleFunc(void(*func)(void))
 - Called when there are no events to be processed
 
-### void glutTimerFunc(unsigned int msecs, void (*func)(int value), value)
+### void glutTimerFunc(unsigned int msecs, void (*func)(int value), int value)
 - Called in every msecs
 
 ### void glutKeyboardFunc(void(*func)(unsigned char key, int x, int y))
@@ -80,13 +80,21 @@ int main(int argc, char *argv[]) {
 
 ## 3. _XEvent union
 - 모든 이벤트의 정보는 이 자료 구조를 통해 전달이 된다.
-
-![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/image003.png)
+```C++
+typedef union _XEvent {
+    int                 type;
+    XKeyEvent           xkey;
+    XButtonEvent        xbutton;
+    XMotionEvent        xmotion;
+    XConfigureEvent     xconfigure;
+    /*etc*/
+} XEvent;
+```
 
 ## 4. Window Event
 
 ### (1) XConfigureEvent
-- Reported when window is moveed  or resized
+- Reported when window is moved  or resized
 - Contains [int x, y, width, height]
 - Mask : StructureNotifyMask
 - Type : ConfigureNotify

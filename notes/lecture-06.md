@@ -52,7 +52,7 @@ void Camera::glRender() {
     int w = getViewPortWidth();
     int h = getViewPortHeight();
     glMatrixMode(GL_PROJECTION);
-    glLOADIdentity();
+    glLoadIdentity();
     gluPerspective(...);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -63,7 +63,8 @@ void Camera::glRender() {
 ### Retrieving Current Viewport State
 ```C++
 GLint viewport[4];
-glGetIntergerv(GL_VIEWPORT, viewport); viewport[0]; // x
+glGetIntergerv(GL_VIEWPORT, viewport);
+viewport[0]; // x
 viewport[1]; // y
 viewport[2]; // width
 viewport[3]; // height

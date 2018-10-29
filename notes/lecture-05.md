@@ -48,10 +48,11 @@ glVertex3f(v);     // NMv
 
 ```C
 void display() {
-    glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT); glClearColor(1.0, 1.0, 1.0, 0.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClearColor(1.0, 1.0, 1.0, 0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(-1.0, 1.0, -1.0,1.0, 0.1, 50.0);
+    glOrtho(-1.0, 1.0, -1.0, 1.0, 0.1, 50.0);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     glTranslatef(0.5, 0.0, -2.0);
@@ -99,7 +100,7 @@ void display() {
 - `gluPerpective(field of view, aspect(=w/h), near, far)`    
 ![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/lecture05-003.png)
 
-- `glFrustumleft, right, bottom, top, near, far)`    
+- `glFrustum(left, right, bottom, top, near, far)`    
 ![](https://raw.githubusercontent.com/Noverish/KU-Interactive-Visualization/master/notes/images/lecture05-004.png)
 
 # V. Referencing & Applying the Matrix

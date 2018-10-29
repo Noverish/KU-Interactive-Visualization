@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<string.h>
+#include<X11/X.h>
+#include<X11/Xlib.h>
+#include<X11/XKBlib.h>
+#include<GL/gl.h>
+#include<GL/glx.h>
+#include<GL/glu.h>
+#include<GL/glut.h>

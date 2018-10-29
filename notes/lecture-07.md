@@ -171,7 +171,7 @@ void main() {
 #version 130
 varying vec3 pos;
 void main() {
-    gl_Position = gl_ModelViewMatrix*gl_Vertex;
+    gl_Position = gl_ModelViewMatrix * gl_Vertex;
     gl_FrontColor = gl_Color;
     pos = gl_Vertex.xyz;
 }
@@ -181,10 +181,10 @@ void main() {
 #version 130
 varying vec3 pos;
 void main() {
-    if(cos(pos.x*40.0f)>0.0f&&cos(pos.y*40.0f)>0.0f)
+    if(cos(pos.x * 40.0f) > 0.0f && cos(pos.y * 40.0f) > 0.0f)
         gl_FragColor = gl_Color;
     else
-        gl_FragColor = gl_Color*0.3f;
+        gl_FragColor = gl_Color * 0.3f;
 }
 ```
 
